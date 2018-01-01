@@ -1,0 +1,207 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:500,700");
+@font-face {
+    font-family: 'FonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+* { margin: 0; padding:0;}
+html { 
+    height: 100%;
+    background:  rgba(52, 177, 140, 0.9);
+}
+body {
+    font-family: "Ubuntu", sans-serif;
+}
+h1 {
+    letter-spacing:-2px;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+}
+p {
+    text-align:justify;
+    text-indent: 50px;
+}
+#logo {
+    position: absolute;
+    width: 100px;
+    top:  -2px;
+    left: 5px;
+}
+
+.cabecalho {
+    width: 500px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+}
+.erros, .ok {
+    width: 390px;
+    padding: 5px;
+    background: rgba(238, 249, 113, 0.9);
+    margin: 20px auto 0 auto;
+    border: 1px solid rgba(222, 239, 10, 0.9);
+    border-radius: 4px;
+    color: #333;
+}
+.ok {
+    background: rgba(155, 222, 143, 0.9);
+    border-color: rgba(68, 171, 50, 0.9);
+    color: white;
+}
+#formulario {
+    width: 500px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+}
+#formulario h2 {
+    color: #090;
+    width: 100%;
+    float: left;
+    text-align: left;
+    margin-bottom: 4%;
+}
+
+#formulario h3 {
+    color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    float: left;
+    text-align: left;
+    margin-bottom: 4%;
+}
+
+#formulario label {
+    color: #090;
+    width: 100%;
+    float: left;
+    text-align: left;
+    margin-bottom: 2px;
+}
+#formulario fieldset {
+    background: wheat;
+    border: 0 none;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10px;
+    position: absolute;
+}
+#formulario fieldset:not(:first-of-type){
+    display: none;
+}
+#formulario select {
+    padding: 10px;
+    border: 1px solid rgba(38, 128, 101, 0.9);
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+    color: #090;
+    margin-bottom: 10px;
+}
+#formulario input, #formulario textarea #formulario button {
+    padding: 10px;
+    border: 1px solid rgba(38, 128, 101, 0.9);
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+    color: #090;
+    margin-bottom: 10px;
+}
+
+#formulario input[type="radio"] {
+    display:none;
+}
+
+#formulario input[type="radio"] + label {
+    color: rgba(38, 128, 101, 0.9);
+    font-family:Arial, sans-serif;
+    font-size:14px;
+}
+
+#formulario input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url(http://webdesigntutsplus.s3.amazonaws.com/tuts/391_checkboxes/check_radio_sheet.png) -38px top no-repeat;
+    cursor:pointer;
+}
+
+#formulario input[type="radio"]:checked + label span {
+    background:url(http://webdesigntutsplus.s3.amazonaws.com/tuts/391_checkboxes/check_radio_sheet.png) -57px top no-repeat;
+}
+
+#formulario .acao {
+    width: 100px;
+    background: rgba(38, 128, 101, 0.9);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;  
+    padding: 12px 0;
+    float: left;
+    margin-right: 5%; 
+}
+#formulario .acao:hover {
+    background: rgba(52, 177, 140, 0.9);
+    cursor: pointer;
+}
+#formulario #progress {
+    margin-bottom: 30px;
+    overflow: hidden;
+    counter-reset: step;
+}
+#formulario #progress li {
+    list-style-type: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 11px;
+    float: left;
+    width: 14.28%;
+    position: relative;
+}
+#formulario #progress li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    display: block;
+    line-height: 20px;
+    background: white;
+    color: #333;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    margin: 0 auto 10px auto;
+}
+#formulario #progress li:after {
+    content: '';
+    width: 100%;
+    background: white;
+    height: 2px;
+    position: absolute;
+    top: 9px;
+    left: -50%;
+    z-index: -1;
+}
+#formulario #progress li:first-child:after {
+    content: none;
+}
+#formulario #progress li.ativo:before, #formulario #progress li.ativo:after {
+    background: rgba(40, 208, 141, 0.9);
+    color: white;
+    text-shadow: 0 1px 0;
+}
